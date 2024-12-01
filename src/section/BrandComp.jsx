@@ -1,5 +1,6 @@
 import React from "react";
 import { brand } from "../assets/assets"; // Assuming your images are in assets
+import Title from "../components/Title";
 
 const BrandSlider = () => {
   const products = [
@@ -40,7 +41,8 @@ const BrandSlider = () => {
   return (
     <div className="w-full bg-gray-100">
       {/* Slider Section */}
-      <h1 className="">OUR PARTNER'S</h1>
+      {/* <h1 className="">OUR PARTNER'S</h1> */}
+      {/* <Title text1={OUR} text2={PARTNER}/> */}
       <div className="overflow-hidden relative">
         <div className="flex items-center animate-slider">
           {products.concat(products).map((product, index) => (
