@@ -48,7 +48,7 @@ const BrandSlider = () => {
           {products.concat(products).map((product, index) => (
             <div
               key={index}
-              className="md:w-[400px] sm:w-[100px] md:mx-4  sm:mt-10 md:p-4  bg-white border rounded-lg shadow-md flex-shrink-0"
+              className="md:w-[400px] sm:w-[100px] md:mx-4  sm:mt-10 md:p-4  bg-white md:border rounded-lg md:shadow-md flex-shrink-0"
             >
               <img
                 className="h-32 mx-auto object-contain"
