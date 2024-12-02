@@ -1,4 +1,4 @@
-import adidas from "./adidas.png";
+import adidas from "./adidas4.png";
 import nike from "./nike.png";
 import puma from "./puma.png";
 import rebok from "./rebok.jpg";

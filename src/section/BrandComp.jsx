@@ -55,7 +55,7 @@ const BrandSlider = () => {
                 src={product.imageUrl}
                 alt={product.name}
               />
-              <h3 className="text-center text-xl font-semibold text-gray-800 mt-2">
+              <h3 className="text-center text-xl font-semibold  text-gray-800 mt-2">
                 {product.name}
               </h3>
             </div>
