@@ -21,6 +21,10 @@ import ugg from "./ugg.png";
 import vans from "./vans.png";
 import woodland from "./woodland.png";
 import allen from "./allen.jpg"
+import cross_icon from "./cross_icon.png"
+import menu from "./menu_icon.png"
+
+
 export const assets = {
   weblogo,
   Hero,
@@ -29,6 +33,15 @@ export const assets = {
   Hero4,
   about,
 };
+
+export const logo = {
+  cross_icon,
+  menu,
+
+}
+
+
+
 export const brand = {
   adidas,
   nike,

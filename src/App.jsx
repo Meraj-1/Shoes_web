@@ -10,6 +10,7 @@ import BrandComp from './section/BrandComp';
 
 function App() {
   return (
+    <div className=''>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -18,6 +19,7 @@ function App() {
       </Routes>
       <Footer/>
     </BrowserRouter>
+    </div>
   );
 }
 

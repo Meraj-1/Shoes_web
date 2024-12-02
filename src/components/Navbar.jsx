@@ -6,44 +6,42 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav>
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className=  "">
+      <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div>
-          {/* <a href={assets.rebok}>{assets.puma}</a> */}
-          <Link to={"/home"}><img src={assets.weblogo} className="h-30 w-40" alt=""/></Link>
+          <Link to={"/"}>
+            <img src={assets.weblogo} className="h-30 w-40" alt="Logo" />
+          </Link>
         </div>
 
         {/* Mobile Hamburger Menu */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className=" text-black text-3xl md:hidden focus:outline-none"
+          className="text-black flex text-2xl md:hidden focus:outline-none"
         >
           ☰
         </button>
+
         {/* Menu Links */}
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } absolute md:static top-16 left-0 w-full md:w-auto  md:flex md:items-center`}
+          } absolute md:static top-16 left-0 w-full md:w-auto bg-white shadow-md md:shadow-none z-50 md:flex md:items-center`}
         >
           <ul className="flex flex-col md:flex-row md:space-x-6 text-black text-center md:text-left">
-            <li className="hover:bg-blue-600 font-bold  md:hover:bg-transparent p-4 md:p-0">
-              <a href="#">Home</a>
+            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
+              <a href="/">Home</a>
             </li>
-            <li className="hover:bg-blue-600 font-bold md:hover:bg-transparent p-4 md:p-0">
-              <a href="#">About</a>
+            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
+              <a href="/about">About</a>
             </li>
-            <li className="hover:bg-blue-600 font-bold md:hover:bg-transparent p-4 md:p-0">
-              <a href="#">Services</a>
+            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
+              <a href="/contact">Contact</a>
             </li>
-            <li className="hover:bg-blue-600 font-bold md:hover:bg-transparent p-4 md:p-0">
-              <a href="#">Contact</a>
-            </li>
-            <li className="hover:bg-blue-600 font-bold md:hover:bg-transparent p-4 md:p-0">
+            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
               <a href="/brands">Brands</a>
             </li>
-
           </ul>
         </div>
       </div>

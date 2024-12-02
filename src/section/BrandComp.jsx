@@ -1,5 +1,5 @@
 import React from "react";
-import { brand } from "../assets/assets"; // Assuming your images are in assets
+import { assets, brand } from "../assets/assets"; // Assuming your images are in assets
 import Title from "../components/Title";
 
 const BrandSlider = () => {
@@ -39,16 +39,16 @@ const BrandSlider = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-100">
+    <div>
       {/* Slider Section */}
       {/* <h1 className="">OUR PARTNER'S</h1> */}
       {/* <Title text1={OUR} text2={PARTNER}/> */}
       <div className="overflow-hidden relative">
-        <div className="flex items-center animate-slider">
+        <div className="flex md:py-10 items-center animate-slider">
           {products.concat(products).map((product, index) => (
             <div
               key={index}
-              className="min-w-[200px] mx-4 p-4 bg-white border border-gray-200 rounded-lg shadow-md flex-shrink-0"
+              className="md:w-[400px] sm:w-[100px] md:mx-4  sm:mt-10 md:p-4  bg-white border rounded-lg shadow-md flex-shrink-0"
             >
               <img
                 className="h-32 mx-auto object-contain"
@@ -64,11 +64,11 @@ const BrandSlider = () => {
       </div>
 
       {/* Information Section */}
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-8 p-10">
+      <div className="grid lg:grid-cols-2 md:px-20 md:py-10 sm:grid-cols-1 gap-8 p-10">
         {/* Text Content */}
-        <div className="flex justify-center items-center bg-white rounded-lg shadow-md p-8">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">About Us</h2>
+        <div className="flex justify-center items-center lg:px-20 md:px-10 sm:px-2 lg:py-20">
+          <div className="">
+            {/* <h2 className="text-2xl font-bold text-gray-800 mb-4">About Us</h2> */}
             <p className="text-gray-600 leading-relaxed">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Repellendus quod nemo aliquam nulla obcaecati nam ad? Sunt
@@ -85,11 +85,9 @@ const BrandSlider = () => {
         </div>
 
         {/* Placeholder for Additional Content */}
-        <div className="flex justify-center items-center bg-gray-200 rounded-lg shadow-md p-8">
-          <p className="text-gray-600 leading-relaxed">
-            Add more details, contact information, or any additional
-            promotional content here.
-          </p>
+        <div className="flex justify-center items-center  rounded-lg shadow-md p-8">
+        <img src={assets.Hero3} alt="" />
+                     
         </div>
       </div>
     </div>
