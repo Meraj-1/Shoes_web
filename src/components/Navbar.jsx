@@ -52,7 +52,7 @@ function Navbar() {
             </div>
        <NavLink onClick={()=> setVisible(false)} className="py-4 pl-6 border" to="/">Home</NavLink>
        <NavLink onClick={()=> setVisible(false)} className="py-2 pl-6 border" to="/collection">COLLECTON</NavLink>
-       <NavLink onClick={()=> setVisible(false)} className="py-2 pl-6 border" to="/about">ABOUT</NavLink>
+       <NavLink onClick={()=> setVisible(false)} className="py-2 pl-6 border" to="/brands">Brand</NavLink>
        <NavLink onClick={()=> setVisible(false)} className="py-2 pl-6 border" to="/contact">CONTACT</NavLink>
        </div>
        </div>         
