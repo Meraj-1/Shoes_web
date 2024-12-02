@@ -1,52 +1,64 @@
 import React, { useState } from "react";
-import { assets } from "../assets/assets";
-import { Link } from "react-router-dom";
+import { assets, logo} from "../assets/assets";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   return (
-    <nav className=  "">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <div>
-          <Link to={"/"}>
-            <img src={assets.weblogo} className="h-30 w-40" alt="Logo" />
-          </Link>
-        </div>
-
-        {/* Mobile Hamburger Menu */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-black flex text-2xl md:hidden focus:outline-none"
-        >
-          ☰
-        </button>
-
-        {/* Menu Links */}
-        <div
-          className={`${
-            isOpen ? "block" : "hidden"
-          } absolute md:static top-16 left-0 w-full md:w-auto bg-white shadow-md md:shadow-none z-50 md:flex md:items-center`}
-        >
-          <ul className="flex flex-col md:flex-row md:space-x-6 text-black text-center md:text-left">
-            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
-              <a href="/">Home</a>
-            </li>
-            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
-              <a href="/about">About</a>
-            </li>
-            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
-              <a href="/contact">Contact</a>
-            </li>
-            <li className="font-bold p-4 md:p-0 hover:bg-gray-100 md:hover:bg-transparent">
-              <a href="/brands">Brands</a>
-            </li>
-          </ul>
-        </div>
+     <div className="flex items-center justify-between py-5 font-medium">
+      <Link to='/'><img src={assets.weblogo} alt="logo" className="w-36"/></Link>
+      <ul className='hidden sm:flex gap-5 text-sm text-gray-700  '>
+        <NavLink to="/" className="flex flex-col items-center gap-1">
+         <p>HOME</p>
+         <hr className='w-2/4 border-none h-[1.5px] hidden bg-gray-700'/>
+        </NavLink>
+        <NavLink to="/collection" className="flex flex-col items-center gap-1">
+         <p>COLLECTION</p>
+         <hr className='w-2/4 border-none h-[1.5px] hidden bg-gray-700'/> 
+        </NavLink>
+        <NavLink to="/brands" className="flex flex-col items-center gap-1">
+         <p>Brand</p>
+         <hr className='w-2/4 border-none h-[1.5px] hidden bg-gray-700'/>
+        </NavLink>
+        <NavLink to="/contact" className="flex flex-col items-center gap-1">
+         <p>CONTACT</p>
+         <hr className='w-2/4 border-none h-[1.5px] hidden bg-gray-700'/>
+        </NavLink>
+      </ul>
+      <div className='flex items-center gap-6'>
+      <img onClick={()=> setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer'/>
+      <div className='group relative'> 
+    <Link to="/login"> <img src={logo.profile} alt='' className='w-5 cursor-pointer '/> </Link> 
+      <div className='group-hover:block hidden absolute dropdown-menu right-o pt-4'>
+      <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
+        <p className='cursor-pointer hover:text-black'>My Profile</p>
+        <p className='cursor-pointer hover:text-black'>Orders</p>
+        <p className='cursor-pointer hover:text-black'>LogOut</p>
       </div>
-    </nav>
+      </div>
+      </div>
+      <Link to="/cart" className='relative'>
+      <img src={logo.cart} className='w-5 min-w-5' alt="" />
+      <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'></p>
+      </Link>
+      <img onClick={()=> setVisible(true)} src={logo.menu} className='w-5 cursor-pointer sm:hidden '/>
+      </div>
+       <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
+        <div className='flex flex-col text-gray-600 cursor-pointer'>
+            <div onClick={()=> setVisible(false)} className='flex items-center gap-4 p-3'>
+              <img src={logo.back} className='h-4 rotate-180'/>
+                 <p>Back</p>
+            </div>
+       <NavLink onClick={()=> setVisible(false)} className="py-4 pl-6 border" to="/">Home</NavLink>
+       <NavLink onClick={()=> setVisible(false)} className="py-2 pl-6 border" to="/collection">COLLECTON</NavLink>
+       <NavLink onClick={()=> setVisible(false)} className="py-2 pl-6 border" to="/about">ABOUT</NavLink>
+       <NavLink onClick={()=> setVisible(false)} className="py-2 pl-6 border" to="/contact">CONTACT</NavLink>
+       </div>
+       </div>         
+     </div>
   );
 }
 
 export default Navbar;
+ 

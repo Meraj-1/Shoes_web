@@ -83,9 +83,7 @@ const BrandSlider = () => {
             </p>
           </div>
         </div>
-
-        {/* Placeholder for Additional Content */}
-        <div className="flex justify-center items-center  rounded-lg shadow-md p-8">
+        <div className="">
         <img src={assets.Hero3} alt="" />
                      
         </div>

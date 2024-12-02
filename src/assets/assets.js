@@ -23,6 +23,9 @@ import woodland from "./woodland.png";
 import allen from "./allen.jpg"
 import cross_icon from "./cross_icon.png"
 import menu from "./menu_icon.png"
+import profile from "./profile.png"
+import cart from "./cart.jpg"
+import back from "./back.png"
 
 
 export const assets = {
@@ -32,13 +35,17 @@ export const assets = {
   Hero3,
   Hero4,
   about,
+  
 };
 
 export const logo = {
   cross_icon,
   menu,
-
+  profile,
+  cart,
+  back
 }
+
 
 
 
