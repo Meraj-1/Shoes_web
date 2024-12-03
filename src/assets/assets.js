@@ -23,7 +23,7 @@ import woodland from "./woodland.png";
 import allen from "./allen.jpg"
 import cross_icon from "./cross_icon.png"
 import menu from "./menu_icon.png"
-import profile from "./profile.png"
+import profile from "./profile2.png"
 import cart from "./cart.jpg"
 import back from "./back.png"
 
