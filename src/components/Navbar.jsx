@@ -38,7 +38,7 @@ function Navbar() {
         />
         <div className="group relative">
           <Link to="/login">
-            <img src={logo.profile} alt="" className="w-10 cursor-pointer" />
+            <img src={logo.profile} alt="" className="w-6 cursor-pointer" />
           </Link>
           <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
             <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
@@ -49,13 +49,13 @@ function Navbar() {
           </div>
         </div>
         <Link to="/cart" className="relative">
-          <img src={logo.cart} className="w-10 min-w-10" alt="" />
+          <img src={logo.cart} className="w-6 min-w-6" alt="" />
           {/* <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]"></p> */}
         </Link>
         <img
           onClick={() => setVisible(true)}
           src={logo.menu}
-          className="w-9 cursor-pointer sm:hidden"
+          className="w-6 cursor-pointer sm:hidden"
         />
       </div>
       {/* Mobile Menu */}
